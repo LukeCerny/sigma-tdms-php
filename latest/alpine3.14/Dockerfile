@@ -12,6 +12,12 @@ RUN apk update \
     wget \
     zip \
     autoconf \
+    nginx \
+    git \
+    curl \
+    sudo \
+    nano \
+    ncdu \
     # Install Wkhtmltopdf - START
     wkhtmltopdf \
     xvfb \

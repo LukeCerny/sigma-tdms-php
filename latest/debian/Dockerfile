@@ -11,6 +11,8 @@ RUN apt-get update \
     libzip-dev \
     wget \
     zip \
+    nginx \
+    mcdu \
     && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install zip \
     && pecl install imagick \
