@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 env:
-  IMAGE_NAME: connect-soft/sigma
+  IMAGE_NAME: connectsoft/sigma
 
 jobs:
 
