@@ -28,7 +28,7 @@ RUN apt-get update \
     && apt-get install -y -f
 
 
-RUN if [[ "$ENV" == "development" ]]; then \
+RUN if [ "$ENV" = "development" ]; then \
     echo "Installing xdebug"; \
     pecl install xdebug-2.8.0; \
     docker-php-ext-enable xdebug; \

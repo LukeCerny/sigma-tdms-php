@@ -29,7 +29,7 @@ RUN apk update \
     && docker-php-ext-install zip \
     && docker-php-ext-install pdo_mysql
 
-RUN if [[ "$ENV" == "development" ]]; then \
+RUN if [ "$ENV" = "development" ]; then \
     echo "Installing xdebug"; \
     apk add --no-cache php7-pecl-xdebug; \
     docker-php-ext-enable xdebug; \
