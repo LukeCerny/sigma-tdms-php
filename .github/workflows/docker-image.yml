@@ -61,7 +61,7 @@ jobs:
         id: build_staging_alpine3_14
         uses: docker/build-push-action@v3.2.0
         with:
-          context: latest/staging-alpine3.14/
+          context: latest/staging-alpine-3.14/
           platforms: linux/amd64
           push: true
           tags: ${{ env.IMAGE_NAME }}:staging-7.3-alpine-3.14, ${{ env.IMAGE_NAME }}:staging-alpine-latest

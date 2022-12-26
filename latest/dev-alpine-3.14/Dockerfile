@@ -4,7 +4,7 @@ COPY --from=library/composer:2.1.9 /usr/bin/composer /usr/local/bin/composer
 
 RUN apk update \
     && apk add --no-cache \
-    imagemagic-dev \
+    imagemagick \
     libmcrypt-dev \
     libzip-dev \
     wget \
