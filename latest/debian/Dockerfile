@@ -12,7 +12,7 @@ RUN apt-get update \
     wget \
     zip \
     nginx \
-    mcdu \
+    ncdu \
     && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install zip \
     && pecl install imagick \
@@ -20,7 +20,7 @@ RUN apt-get update \
     && pecl install mcrypt-1.0.2 \
     && docker-php-ext-enable mcrypt \
     && docker-php-ext-install pdo_mysql \
-    && cd ~; \
+    && cd ~ \
     && wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.buster_amd64.deb \
     && dpkg -i ~/wkhtmltox_0.12.5-1.buster_amd64.deb \
     && apt-get install -y -f
