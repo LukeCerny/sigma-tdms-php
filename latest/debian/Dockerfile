@@ -13,6 +13,8 @@ RUN apt-get update \
     zip \
     nginx \
     ncdu \
+    xfonts-base \
+    xfonts-75dpi \
     && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install zip \
     && pecl install imagick \
