@@ -20,6 +20,8 @@ RUN apk update \
     && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install zip \
     && docker-php-ext-install pdo_mysql \
+    && apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
+    && apk add --update linux-headers \
     && pecl install xdebug-2.8.0 \
     && docker-php-ext-enable xdebug \
     && echo "xdebug.remote_enable=1" >> /usr/local/etc/php/php.ini \
