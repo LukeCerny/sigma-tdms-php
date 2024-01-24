@@ -37,33 +37,17 @@ jobs:
         id: build_dev_latest
         uses: docker/build-push-action@v3.2.0
         with:
-          context: latest/debian/
+          context: latest/alpine3.14/
           platforms: linux/amd64
           push: true
           build-args: ENV=development
-          tags: ${{ env.IMAGE_NAME }}:dev-latest, ${{ env.IMAGE_NAME }}:dev-7.3
+          tags: ${{ env.IMAGE_NAME }}:dev-latest, ${{ env.IMAGE_NAME }}:dev-8.3
       - name: Build and push Docker image staging-latest
         id: build_staging_latest
         uses: docker/build-push-action@v3.2.0
         with:
-          context: latest/debian/
-          platforms: linux/amd64
-          push: true
-          tags: ${{ env.IMAGE_NAME }}:staging-latest, ${{ env.IMAGE_NAME }}:staging-7.3
-      - name: Build and push Docker image dev-alpine3.14
-        id: build_dev_alpine3_14
-        uses: docker/build-push-action@v3.2.0
-        with:
           context: latest/alpine3.14/
           platforms: linux/amd64
           push: true
-          build-args: ENV=development
-          tags: ${{ env.IMAGE_NAME }}:dev-7.3-alpine3.14, ${{ env.IMAGE_NAME }}:dev-alpine-latest
-      - name: Build and push Docker image staging-alpine3.14
-        id: build_staging_alpine3_14
-        uses: docker/build-push-action@v3.2.0
-        with:
-          context: latest/alpine3.14/
-          platforms: linux/amd64
-          push: true
-          tags: ${{ env.IMAGE_NAME }}:staging-7.3-alpine3.14, ${{ env.IMAGE_NAME }}:staging-alpine-latest
+          tags: ${{ env.IMAGE_NAME }}:staging-latest ${{ env.IMAGE_NAME }}:staging-8.3
+
