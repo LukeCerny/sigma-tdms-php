@@ -32,6 +32,6 @@ RUN if [ "$ENV" = "development" ]; then \
     echo "xdebug.remote_autostart=1" >> /usr/local/etc/php/php.ini; \
     echo "xdebug.remote_connect_back=0" >> /usr/local/etc/php/php.ini; \
     echo "xdebug.idekey=PHPSTORM" >> /usr/local/etc/php/php.ini; \
-    echo "memory_limit=-1" >> /usr/local/etc/php/php.ini;
+    echo "memory_limit=-1" >> /usr/local/etc/php/php.ini; \
     else echo "Without xdebug"; \
     fi;
