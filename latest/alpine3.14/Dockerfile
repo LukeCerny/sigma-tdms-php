@@ -1,4 +1,4 @@
-FROM library/php:8.3-alpine3.18 as base
+FROM library/php:8.3-fpm-alpine3.18 as base
 
 ARG ENV
 
